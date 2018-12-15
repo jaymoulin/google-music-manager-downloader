@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
+# coding: utf-8
 
 import sys
 import logging
@@ -51,7 +51,7 @@ def main():
         "--device_id",
         '-i',
         default=__DEFAULT_MAC__,
-        help="Uploader identification (should be an uppercase MAC address) (default: <current eth0 MAC address>)"
+        help="Device identification (should be an uppercase MAC address) (default: <current eth0 MAC address>)"
     )
     args = parser.parse_args()
     download(args.directory, oauth=args.oauth, device_id=args.device_id)

@@ -1,23 +1,15 @@
-.. image:: https://raw.githubusercontent.com/jaymoulin/google-music-manager/master/logo.png
-    :alt: logo
-    :target: http://github.com/jaymoulin/google-music-manager
+=================================
+Google Music Manager - Downloader
+=================================
 
-====================================
-Google Music Manager - Python Daemon
-====================================
+
 
 .. image:: https://img.shields.io/github/release/jaymoulin/google-music-manager.svg
     :alt: latest release
     :target: http://github.com/jaymoulin/google-music-manager/releases
-.. image:: https://img.shields.io/pypi/v/google-music-manager-auth.svg
-    :alt: PyPI version
-    :target: https://pypi.org/project/google-music-manager-auth/
 .. image:: https://img.shields.io/pypi/v/google-music-manager-downloader.svg
     :alt: PyPI version
     :target: https://pypi.org/project/google-music-manager-downloader/
-.. image:: https://img.shields.io/pypi/v/google-music-manager-uploader.svg
-    :alt: PyPI version
-    :target: https://pypi.org/project/google-music-manager-uploader/
 .. image:: https://github.com/jaymoulin/jaymoulin.github.io/raw/master/btc.png
     :alt: Bitcoin donation
     :target: https://m.freewallet.org/id/374ad82e/btc
@@ -35,25 +27,13 @@ This work is based upon `Simon Weber's Google Music API <https://github.com/simo
 Installation
 ------------
 
-Avconv is needed to convert some of your files due to Google's MP3 constraint
-also, this program needs `watchdog`, `gmusicapi`, `netifaces` and `bs4` Python libraries to work. 
+This program needs `netifaces` Python library to work.
 
 .. code::
 
-    apt-get install python3-pip libav-tools build-essential
-    pip3 install watchdog gmusicapi bs4 netifaces
-
-Then install the package you need
-
-.. code::
-
+    apt-get install python3-pip build-essential
     pip3 install google-music-manager-downloader
 
-Or
-
-.. code::
-
-    pip3 install google-music-manager-uploader
 
 Once installed, You have to authenticate to Google Music via the `google-music-auth` command
 
@@ -77,31 +57,6 @@ You will be asked to go to a Google URL to allow the connection:
 Usage
 -----
 
-Uploader
-~~~~~~~~
-
-This program will scan a given directory for new elements to upload them to Google Music.
-First, launch the daemon to watch a directory new inputs.
-
-It will *NOT* upload already existing files, *ONLY* new files while the daemon is running. (Please contribute if you want this to change)
-
-.. code::
-
-    usage: google-music-uploader [-h] [--directory DIRECTORY] [--oauth OAUTH] [-r]
-                                  [--uploader_id UPLOADER_ID] [-o]
-
-        optional arguments:
-            -h, --help          show this help message and exit
-            --directory DIRECTORY, -d DIRECTORY
-                                Music Folder to upload from (default: .)
-            --oauth OAUTH, -a OAUTH
-                                Path to oauth file (default: ~/oauth)
-            -r, --remove        Remove files if present (default: False)
-            --uploader_id UPLOADER_ID, -u UPLOADER_ID
-                                Uploader identification (should be an uppercase MAC
-                                address) (default: <current eth0 MAC address>)
-            -o, --oneshot       Upload folder and exit (default: False)
-
 Downloader
 ~~~~~~~~~~
 
@@ -112,14 +67,14 @@ This program will download all your uploaded musics from Google Music to a given
     usage: google-music-download [-h] [--directory DIRECTORY] [--oauth OAUTH]
 
     optional arguments:
-        -h, --help              show this help message and exit
+        -h, --help            show this help message and exit
         --directory DIRECTORY, -d DIRECTORY
-                                Music Folder to download to (default: .)
+                            Music Folder to download to (default: .)
         --oauth OAUTH, -a OAUTH
-                                Path to oauth file (default: ~/oauth)
+                            Path to oauth file (default: ~/oauth)
         --device_id DEVICE_ID, -i DEVICE_ID
-                                Device identification (should be an uppercase MAC
-                                address) (default: <current eth0 MAC address>)
+                            Device identification (should be an uppercase MAC
+                            address) (default: <current eth0 MAC address>)
 
 
 =====
@@ -130,7 +85,7 @@ Requirements
 ------------
 
 Google Music Uploader works with Python 3 or above.
-It requires `Simon Weber's Google Music API <https://github.com/simon-weber/gmusicapi>`_ and `Watchdog <https://pypi.python.org/pypi/watchdog>`_.
+It requires `Simon Weber's Google Music API <https://github.com/simon-weber/gmusicapi>`_.
 
 Submitting bugs and feature requests
 ------------------------------------
