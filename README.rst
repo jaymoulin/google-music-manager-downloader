@@ -1,3 +1,8 @@
+.. image:: https://raw.githubusercontent.com/jaymoulin/google-music-manager-downloader/master/logo.png
+    :alt: logo
+    :target: http://github.com/jaymoulin/google-music-manager-downloader
+
+
 =================================
 Google Music Manager - Downloader
 =================================
