@@ -9,9 +9,9 @@ Google Music Manager - Downloader
 
 
 
-.. image:: https://img.shields.io/github/release/jaymoulin/google-music-manager.svg
+.. image:: https://img.shields.io/github/release/jaymoulin/google-music-manager-downloader.svg
     :alt: latest release
-    :target: http://github.com/jaymoulin/google-music-manager/releases
+    :target: http://github.com/jaymoulin/google-music-manager-downloader/releases
 .. image:: https://img.shields.io/pypi/v/google-music-manager-downloader.svg
     :alt: PyPI version
     :target: https://pypi.org/project/google-music-manager-downloader/
