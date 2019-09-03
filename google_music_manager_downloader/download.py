@@ -17,8 +17,12 @@ def download(
     oauth: str = os.environ['HOME'] + "/oauth",
     device_id: str = __DEFAULT_MAC__
 ) -> None:
-    logging.basicConfig(level=logging.INFO)
+    handler = logging.StreamHandler()
+    handler.setLevel(logging.DEBUG)
+    handler.setFormatter(logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s'))
     logger = logging.getLogger(__name__)
+    logger.setLevel(logging.DEBUG)
+    logger.addHandler(handler)
     logger.info("Init Daemon - Press Ctrl+C to quit")
     api = Musicmanager()
     if not api.login(oauth, device_id):
