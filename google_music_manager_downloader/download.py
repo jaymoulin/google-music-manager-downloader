@@ -31,7 +31,13 @@ def download(
 
     for song in api.get_uploaded_songs():
         folder_path = os.path.join(directory, song['album_artist'], song['album'])
-        file_path = os.path.join(folder_path, '%d - %s.mp3' % (song['track_number'], song['title'].replace('/', '_')))
+        file_path = os.path.join(
+            folder_path,
+            '%d - %s.mp3' % (
+                song['track_number'],
+                song['title'].replace('/', '_').replace('?', '_')
+            )
+        )
         file_path = file_path.encode('utf8')
         folder_path = folder_path.encode('utf8')
         if not os.path.exists(file_path):
