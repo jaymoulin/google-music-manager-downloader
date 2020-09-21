@@ -46,10 +46,10 @@ Once installed, You have to authenticate to Google Music via the `google-music-a
 
 .. code::
 
-    # Usage google-music-auth [path_to_oauth_cred_file=~/oauth]
+    # Usage google-music-auth [path_to_oauth_cred_file=~/.gmusicdownloader/creds]
 
 
-If first parameter is not defined, the script will try to store/load your oauth credentials through the `~/oauth` file.
+If first parameter is not defined, the script will try to store/load your oauth credentials through the `~/.gmusicdownloader/creds` file.
 
 Then follow prompted instructions.
 
@@ -78,7 +78,7 @@ This program will download all your uploaded musics from Google Music to a given
         --directory DIRECTORY, -d DIRECTORY
                             Music Folder to download to (default: .)
         --oauth OAUTH, -a OAUTH
-                            Path to oauth file (default: ~/oauth)
+                            Path to oauth file (default: ~/.gmusicdownloader/creds)
         --device_id DEVICE_ID, -i DEVICE_ID
                             Device identification (should be an uppercase MAC
                             address) (default: <current eth0 MAC address>)
