@@ -1,0 +1,22 @@
+name: Build Image & Publish Package
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  build-docker-and-package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Installing dependencies
+        run: |
+          sudo apt update && sudo apt install make -y
+          sudo apt install -y qemu qemu-user-static qemu-user binfmt-support
+          sudo apt update && sudo apt install make python3-pip python3-setuptools -y
+          pip3 install twine
+      - name: Build package
+        run: make install
+      - name: Publish package
+        run: python3 -m twine upload dist/* -u "${{ secrets.PYPI_USERNAME }}" -p "${{ secrets.PYPI_PASSWORD }}"
