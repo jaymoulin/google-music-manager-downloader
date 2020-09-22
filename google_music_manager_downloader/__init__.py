@@ -3,4 +3,4 @@ This program will replace former Google MusicManager to upload your music librar
 """
 
 __all__ = ['download']
-__version__ = '1.3.3'
+__version__ = '1.4.0'
